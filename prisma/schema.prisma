@@ -1,0 +1,38 @@
+// Prisma Schema untuk UTS Pemrograman Web - Toko Alat Gambar
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Model data produk alat gambar
+model AlatGambar {
+  id          Int      @id @default(autoincrement())
+  nama_produk String
+  kategori    String
+  merk        String
+  harga       Int
+  stok        Int
+  deskripsi   String
+  gambar      String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("alat_gambar")
+}
+
+// Model data pengguna / admin untuk login
+model Pengguna {
+  id           Int      @id @default(autoincrement())
+  username     String   @unique
+  password     String
+  nama_lengkap String
+  role         String   @default("admin")
+  createdAt    DateTime @default(now())
+
+  @@map("pengguna")
+}
