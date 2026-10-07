@@ -50,7 +50,7 @@ export default async function HomePage() {
           <p className="text-stone-300 text-sm sm:text-base leading-relaxed">
             Kelola inventaris produk seni mulai dari pensil grafit sketsa, cat
             air, spidol ilustrasi, buku sketsa, hingga peralatan studio.
-            Dilengkapi fitur CRUD lengkap, API rute JSON, dan database PostgreSQL.
+            Dilengkapi fitur CRUD lengkap dan integrasi database PostgreSQL.
           </p>
 
           <div className="pt-2 flex flex-wrap items-center gap-3">
@@ -70,25 +70,6 @@ export default async function HomePage() {
                 <line x1="5" y1="12" x2="19" y2="12" />
               </svg>
               Tambah Produk Baru
-            </Link>
-
-            <Link
-              href="/api/produk"
-              target="_blank"
-              className="px-4 py-2.5 rounded-xl bg-stone-800/80 hover:bg-stone-800 text-stone-200 border border-stone-700 font-semibold text-sm transition-all flex items-center gap-2"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-4 h-4 text-amber-400"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <polyline points="16 18 22 12 16 6" />
-                <polyline points="8 6 2 12 8 18" />
-              </svg>
-              Buka API JSON
             </Link>
           </div>
         </div>
@@ -153,7 +134,7 @@ export default async function HomePage() {
         </div>
       </div>
 
-      {/* Komponen Utama: Daftar Produk dengan Switch Kartu / Tabel & Tombol Hapus */}
+      {/* Komponen Utama: Daftar Produk */}
       <div className="space-y-4">
         <div className="flex items-center justify-between">
           <h2 className="text-xl font-bold text-stone-900 flex items-center gap-2">
